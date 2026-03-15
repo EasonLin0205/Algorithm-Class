@@ -24,6 +24,25 @@ class Main {
         evenSum += even * even;
     }
 
+    public static void updateSum(int m, int n) {
+        if (m > n) {
+            m ^= n;
+            n ^= m;
+            m ^= n;
+        }
+        while (m <= n) {
+            if (m % 2 == 0) {
+                evenPlus(m++);
+            } else {
+                oddPlus(m++);
+            }
+        }
+    }
+
+    public static void show(int evenSum, int oddSum) {
+        System.out.println(evenSum + " " + oddSum);
+    }
+
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         int m, n;
@@ -32,19 +51,8 @@ class Main {
             oddSum = 0;
             m = input.nextInt();
             n = input.nextInt();
-            if (m > n) {
-                m ^= n;
-                n ^= m;
-                m ^= n;
-            }
-            while (m <= n) {
-                if (m % 2 == 0) {
-                    evenPlus(m++);
-                } else {
-                    oddPlus(m++);
-                }
-            }
-            System.out.println(evenSum + " " + oddSum);
+            updateSum(m, n);
+            show(evenSum, oddSum);
         }
     }
 }
