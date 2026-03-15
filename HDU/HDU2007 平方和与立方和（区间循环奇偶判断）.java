@@ -25,11 +25,6 @@ class Main {
     }
 
     public static void updateSum(int m, int n) {
-        if (m > n) {
-            m ^= n;
-            n ^= m;
-            m ^= n;
-        }
         while (m <= n) {
             if (m % 2 == 0) {
                 evenPlus(m++);
@@ -51,6 +46,11 @@ class Main {
             oddSum = 0;
             m = input.nextInt();
             n = input.nextInt();
+            if (m > n) {
+                m ^= n;
+                n ^= m;
+                m ^= n;
+            }
             updateSum(m, n);
             show(evenSum, oddSum);
         }
