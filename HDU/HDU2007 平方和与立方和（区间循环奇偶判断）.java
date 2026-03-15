@@ -24,16 +24,6 @@ class Main {
         evenSum += even * even;
     }
 
-    public static void updateSum(int m, int n) {
-        while (m <= n) {
-            if (m % 2 == 0) {
-                evenPlus(m++);
-            } else {
-                oddPlus(m++);
-            }
-        }
-    }
-
     public static void show(int evenSum, int oddSum) {
         System.out.println(evenSum + " " + oddSum);
     }
@@ -51,7 +41,13 @@ class Main {
                 n ^= m;
                 m ^= n;
             }
-            updateSum(m, n);
+            while (m <= n) {
+                if (m % 2 == 0) {
+                    evenPlus(m++);
+                } else {
+                    oddPlus(m++);
+                }
+            }
             show(evenSum, oddSum);
         }
     }
