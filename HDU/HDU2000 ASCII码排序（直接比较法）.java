@@ -15,7 +15,7 @@ class Main {
         while (input.hasNext()) {
             char[] chs = input.nextLine().toCharArray();
             sortThreeElem(chs);
-            System.out.println(chs[0] + " " + chs[1] + " " + chs[2]);
+            show(chs);
         }
     }
 
@@ -30,5 +30,9 @@ class Main {
         if (chs[0] > chs[1]) swap(chs, 0, 1);
         if (chs[0] > chs[2]) swap(chs, 0, 2);
         if (chs[1] > chs[2]) swap(chs, 1, 2);
+    }
+
+    public static void show(char[] chs){
+        System.out.println(chs[0] + " " + chs[1] + " " + chs[2]);
     }
 }
