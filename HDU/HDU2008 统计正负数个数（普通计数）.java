@@ -26,7 +26,7 @@ class Main {
             while (n-- > 0) {
                 updateCount(input.nextDouble());
             }
-            System.out.println(negative + " " + zero + " " + positive);
+            show();
             n = input.nextInt();
         }
     }
@@ -35,5 +35,9 @@ class Main {
         if (num == 0) zero++;
         else if (num < 0) negative++;
         else positive++;
+    }
+
+    public static void show() {
+        System.out.println(negative + " " + zero + " " + positive);
     }
 }
