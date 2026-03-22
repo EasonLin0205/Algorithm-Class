@@ -59,6 +59,10 @@ public class Main {
         return secant(left, right, r, R, H, V);
     }
 
+    public static void show(double r, double R, double H, double V) {
+        System.out.printf("%.6f\n", search(r, R, H, V));
+    }
+
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         int T = input.nextInt();
@@ -67,7 +71,7 @@ public class Main {
             double R = input.nextDouble();
             double H = input.nextDouble();
             double V = input.nextDouble();
-            System.out.printf("%.6f\n", search(r, R, H, V));
+            show(r, R, H, V);
         }
     }
 }
