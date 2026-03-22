@@ -81,6 +81,10 @@ public class Main {
         return false;
     }
 
+    public static void show() {
+        System.out.println(hasTargetSum(input.nextInt()) ? "YES" : "NO");
+    }
+
     public static void main(String[] args) {
         int index = 1;
         while (input.hasNext()) {
@@ -89,7 +93,7 @@ public class Main {
             int n = input.nextInt();
             System.out.println("Case " + index++ + ":");
             while (n-- > 0) {
-                System.out.println(hasTargetSum(input.nextInt()) ? "YES" : "NO");
+                show();
             }
         }
     }
