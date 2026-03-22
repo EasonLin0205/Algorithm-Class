@@ -66,6 +66,10 @@ public class Main {
         return left;
     }
 
+    public static void show(int B, int[] people) {
+        System.out.println(twoPointSearch(B, people));
+    }
+
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         int N = input.nextInt();
@@ -76,7 +80,7 @@ public class Main {
             for (int i = 0; i < people.length; i++) {
                 people[i] = input.nextInt();
             }
-            System.out.println(twoPointSearch(B, people));
+            show(B, people);
             N = input.nextInt();
             B = input.nextInt();
         }
