@@ -39,7 +39,7 @@ public class Main {
         double left = 0;
         double right = 0;
         for (double radius : r) {
-            right += radius * radius;
+            right = Math.max(radius * radius, right);
         }
         double middle;
         while (right - left >= 1e-6) {
