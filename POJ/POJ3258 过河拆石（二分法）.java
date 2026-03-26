@@ -27,7 +27,7 @@ the starting rock. No two rocks share the same position.
 
 Output
 Line 1: A single integer that is the maximum of the shortest distance a cow has to jump
-after removing M rocks1
+after removing M rocks
 */
 
 import java.util.Arrays;
