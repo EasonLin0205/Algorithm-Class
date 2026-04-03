@@ -26,3 +26,4 @@ class Test implements Comparable<Test> {
         return Double.compare(this.correct - this.total * this.avg, t.correct - t.total * t.avg);
     }
 }
+1
